@@ -55,7 +55,7 @@ export class OrderController{
 
         const data = await this.orderService.updateOrder(req.params.id, req.body);
         if(!data){
-            return res.status(404).json({message: 'No data found'});
+            return res.status(404).json({message: 'No order found'});
         }
         res.status(201).json(data)
         }catch(e){
